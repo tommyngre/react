@@ -1,21 +1,25 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import FriendCard from "./components/FriendCard";
+import Wrapper from "./components/Wrapper";
+import friends from "./friends.json";
+import "./App.css";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <Wrapper>
+    <h1 className="title">weird clicking game</h1>
+
+    <div>
+      {friends.map(friend => (
+        <FriendCard
+          key={friend.id}
+          name={friend.name}
+          image={friend.image}
+        />
+      ))
+      }
+    </div>
+
+  </Wrapper>
+);
 
 export default App;
