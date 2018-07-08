@@ -8,8 +8,7 @@ export class Wrapper extends Component {
 
   state = {
     score: 0,
-    //move unguessed cards into `reviewed` when clicked
-    reviewed: []
+    clicked: [] 
   };
 
   render() {
