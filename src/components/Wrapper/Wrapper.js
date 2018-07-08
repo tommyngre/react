@@ -11,6 +11,24 @@ export class Wrapper extends Component {
     clicked: [] 
   };
 
+  handleClick = event => {
+    event.preventDefault();
+    const {name} = event.target;
+    if (this.state.clicked.indexOf(name) <0 ) {
+      this.setState({
+        clicked: this.state.clicked.push(name)
+      });
+      console.log(name + "added to clicked")
+      console.log("clicked",this.state.clicked)
+      this.setState({
+        score: this.state.score+1
+      });
+    } else {
+      //already guessed
+    }
+  };
+  
+
   render() {
     return (
       <div className="container">
@@ -25,6 +43,7 @@ export class Wrapper extends Component {
               key={friend.id}
               name={friend.name}
               image={friend.image}
+              onClick={this.handleClick}
             />
           ))}
         </div>
