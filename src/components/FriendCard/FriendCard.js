@@ -4,12 +4,26 @@ import "./FriendCard.css";
 export class FriendCard extends Component {
 
   state = {
-    isClick: true
+    isActive: true,
+    class: "card col-3 active-card"
+  }
+
+  handleClick = event => {
+    event.preventDefault();
+    //const { name } = event.target;
+
+    if (this.state.isActive) {
+      this.setState({
+        isActive: false,
+        class: "card col-3 inactive-card"
+      });
+    }
+
   }
 
   render() {
     return (
-      <div className="card col-3">
+      <div className={this.state.class} onClick={this.handleClick}>
         <div className="img-container">
           <img className="img-responsive"
             alt={this.props.name}

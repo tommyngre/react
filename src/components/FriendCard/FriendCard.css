@@ -1,3 +1,7 @@
+.inactive-card{
+  display:none;
+}
+
 .card {
   background: #fff;
   position: relative;
