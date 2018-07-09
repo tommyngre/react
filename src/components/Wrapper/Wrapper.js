@@ -14,17 +14,24 @@ export class Wrapper extends Component {
   handleClick = event => {
     event.preventDefault();
     const {name} = event.target;
+
+    // IF CLICKED CHARACTER IS NOT IN `CLICKED`
+    // -ADD TO `CLICKED`
+    // -INCREMENT `SCORE`
+
     if (this.state.clicked.indexOf(name) <0 ) {
       this.setState({
-        clicked: this.state.clicked.push(name)
+        clicked: this.state.clicked.concat([name])
       });
-      console.log(name + "added to clicked")
-      console.log("clicked",this.state.clicked)
       this.setState({
         score: this.state.score+1
       });
     } else {
-      //already guessed
+      // PROVIDE FEEDBACK
+    }
+
+    if (this.state.score === 16) {
+      // HANDLE WIN
     }
   };
   
