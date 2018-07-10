@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import "./FriendCard.css";
+import "./Card.css";
 
-export class FriendCard extends Component {
+export class Card extends Component {
 
   state = {
     isActive: true,
@@ -15,7 +15,7 @@ export class FriendCard extends Component {
     if (this.state.isActive) {
       this.setState({
         isActive: false,
-        class: "card col-3 inactive-card"
+        // class: "card col-3 inactive-card"
       });
     }
 
@@ -32,9 +32,9 @@ export class FriendCard extends Component {
             onClick={this.props.onClick} />
         </div>
         <div className="content">
-          <h3>
+          <h5>
             {this.props.name}
-          </h3>
+          </h5>
         </div>
       </div>
     );
