@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import cards from "../../cards.json";
 import { Header } from "../Header/Header.js";
+import { Footer } from "../Footer/Footer.js";
 import { Alert } from "../Alert/Alert.js";
 import { Card } from "../Card/Card.js";
 import "./Wrapper.css";
@@ -85,6 +86,8 @@ export class Wrapper extends Component {
             />
           ))}
         </div>
+
+        <Footer />
 
       </div>
     );
