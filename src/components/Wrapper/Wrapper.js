@@ -21,16 +21,8 @@ export class Wrapper extends Component {
   shuffle = () => {
       for (let i = cards.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
-          [cards[i], cards[j]] = [cards[j], cards[i]]; // eslint-disable-line no-param-reassign
+          [cards[i], cards[j]] = [cards[j], cards[i]];
       }
-  }
-
-  checkHighScore = () => {
-    if (this.state.score > this.state.highScore) {
-      this.setState({
-        highScore: this.state.score
-      })
-    }
   }
 
   handleClick = event => {
@@ -41,12 +33,19 @@ export class Wrapper extends Component {
     // -ADD TO `CLICKED`
     // -INCREMENT `SCORE`
     if (this.state.clicked.indexOf(name) <0 ) {
+
+      let newHighScore = ((this.state.score+1) > this.state.highScore) 
+      ? this.state.score+1
+      : this.state.highScore;
+    
       this.setState({
         clicked: this.state.clicked.concat([name]),
         turnOutcome: "Got one! Good job!",
         outcomeClass: "green",
-        score: this.state.score+1
+        score: this.state.score + 1,
+        highScore: newHighScore
       });
+
     } else {
       this.setState({
         clicked: [],
@@ -60,9 +59,7 @@ export class Wrapper extends Component {
       // HANDLE WIN
     }
 
-    this.checkHighScore();
     this.shuffle();
-
   };
   
   render() {
