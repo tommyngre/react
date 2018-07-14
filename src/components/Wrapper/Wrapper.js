@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import cards from "../../cards.json";
 import { Header } from "../Header/Header.js";
-import { HighScore } from "../HighScore/HighScore.js";
 import { Alert } from "../Alert/Alert.js";
 import { Card } from "../Card/Card.js";
 import "./Wrapper.css";
@@ -68,11 +67,7 @@ export class Wrapper extends Component {
   
   render() {
     return (
-      <div className="container">
-
-        <HighScore 
-          highScore = {this.state.highScore}
-        />
+      <div>
 
         <Header />
 
@@ -80,6 +75,7 @@ export class Wrapper extends Component {
           message={this.state.turnOutcome}
           outcomeClass={this.state.outcomeClass}
           score={16-this.state.score}
+          highScore = {this.state.highScore}
         />
 
         <div id="cards-wrapper" className="row">

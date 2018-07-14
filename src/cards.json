@@ -1,82 +1,82 @@
 [
   {
     "id": 1,
-    "name": "enderman",
+    "name": "Enderman",
     "image": "./images/enderman.png"
   },
   {
     "id": 2,
-    "name": "skeleton",
+    "name": "Skeleton",
     "image": "./images/skeleton.png"
   },
   {
     "id": 3,
-    "name": "creeper",
+    "name": "Creeper",
     "image": "./images/creeper.png"
   },
   {
     "id": 4,
-    "name": "zombie",
+    "name": "Zombie",
     "image": "./images/zombie.png"
   },
   {
     "id": 5,
-    "name": "wither boss",
+    "name": "Wither Boss",
     "image": "./images/wither-boss.png"
   },
   {
     "id": 6,
-    "name": "steve",
+    "name": "Steve",
     "image": "./images/steve.png"
   },
   {
     "id": 7,
-    "name": "chicken",
+    "name": "Chicken",
     "image": "./images/chicken.png"
   },
   {
     "id": 8,
-    "name": "herobrine",
+    "name": "Herobrine",
     "image": "./images/herobrine.png"
   },
   {
     "id": 9,
-    "name": "spider",
+    "name": "Spider",
     "image": "./images/spider.png"
   },
   {
     "id": 10,
-    "name": "slime",
+    "name": "Slime",
     "image": "./images/slime.png"
   },
   {
     "id": 11,
-    "name": "villager",
+    "name": "Villager",
     "image": "./images/villager.png"
   },
   {
     "id": 12,
-    "name": "sheep",
+    "name": "Sheep",
     "image": "./images/sheep.png"
   },
   {
     "id": 13,
-    "name": "wither minion",
+    "name": "Wither Minion",
     "image": "./images/wither-minion.png"
   },
   {
     "id": 14,
-    "name": "cave spider",
+    "name": "Cave Spider",
     "image": "./images/cave-spider.png"
   },
   {
     "id": 15,
-    "name": "wolf",
+    "name": "Wolf",
     "image": "./images/wolf.png"
   },
   {
     "id": 16,
-    "name": "magma cube",
+    "name": "Magma Cube",
     "image": "./images/magma-cube.png"
   }
 ]
